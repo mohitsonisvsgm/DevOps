@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+
+
+
+kind: Deployment 
+
+
+
+metadata:
+
+  name: web-app-pink-deployment
+
+  labels:
+
+    application: web-pink-app
+
+
+
+spec:
+
+  selector:
+
+    matchLabels:
+
+      application: web-pink-app  
+
+  replicas: 3  
+
+  template:
+
+    metadata:
+
+      name: web2
+
+      labels:
+
+        application: web-pink-app 
+
+        env: dev 
+
+        color: pink
+
+      
+
+    spec:
+
+      containers:
+
+        - name: pink
+
+          image: mohitsoniv/ubuntu:webappPink

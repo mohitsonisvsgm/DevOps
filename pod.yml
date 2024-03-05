@@ -1,0 +1,25 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  name: mohitpinkapp
+
+  labels:
+
+    name: myapp
+
+spec:
+
+  containers:
+
+  - name: myapp
+
+    image:  mohitsoniv/ubuntu:webappPink
+
+    
+
+    ports:
+
+      - containerPort: 80

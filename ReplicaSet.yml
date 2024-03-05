@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+
+
+
+kind: ReplicaSet
+
+
+
+metadata:
+
+  name: sl-replicaset
+
+  labels:
+
+    application: web-appnavy
+
+
+
+spec:
+
+  selector:
+
+    matchLabels:
+
+      application: web-appnavy
+
+  replicas: 20
+
+  template:
+
+    metadata:
+
+      name: webnavy2
+
+      labels:
+
+        application: web-appnavy 
+
+        env: dev 
+
+      
+
+    spec:
+
+      containers:
+
+        - name: httpd
+
+          image: mohitsoniv/httpd:webappNavy

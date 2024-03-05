@@ -1,0 +1,25 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+
+  name: mohitappnavy
+
+  labels:
+
+    name: myapp
+
+spec:
+
+  containers:
+
+  - name: myapp
+
+    image:  mohitsoniv/ubuntu:webappNavy
+
+    
+
+    ports:
+
+      - containerPort: 80
